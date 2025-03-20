@@ -33,6 +33,11 @@ const QrCode = () => {
             });
     }
 
+    const handleClear = () => {
+        setQrData("");
+        setQrSize("");
+    }
+
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             generateQR(e);
@@ -56,6 +61,7 @@ const QrCode = () => {
                     <input type='text' id='sizeInput' placeholder='Enter Image Size' value={qrSize} onChange={(e) => setQrSize(e.target.value)} onKeyDown={handleKeyDown} />
                     <button className='generate-btn' onClick={generateQR} disabled={loading}>Generate QR Code</button>
                     <button className='download-btn' onClick={downloadQR}>Download QR Code</button>
+                    <button className='clear-btn' onClick={handleClear}>Clear</button>
                 </div>
             </div>
         </>

@@ -70,5 +70,10 @@ button::selection{
   padding: 10px 0px;
   margin-bottom: 1.5%;
 }
-
-
+.clear-btn{
+  background-color: orangered;
+  margin-left: 10px;
+}
+.clear-btn:hover{
+  background-color: #CC3700;
+}
